@@ -1,0 +1,76 @@
+.heading{
+    background-color: brown;
+    text-align: center;
+    } 
+    
+    
+    .parent{
+        background-color: blue;
+        height: 200 px;
+        width: 400 px;
+    background-attachment:blank;
+    display: flex;} */
+    
+    .child2{
+       height: 300px;
+       width: 600px;
+        background-color: aqua;
+        display: flex;
+        justify-content:space-around;
+    }
+    .chota1{
+        height: 100px;
+        width: 100px;
+        background-color: rgb(0, 0, 0);
+        background-image: url(sneaker.jpg);
+        margin: 200px;
+        margin-top: 150px;
+        align-self: center;
+    }
+    
+    .heading{
+    text-align: center;
+    text-decoration: underline rgb(217, 181, 252);
+    text-shadow: 2px 2px 2px orange
+    ;
+    
+    }
+    .papa{
+        font-size: x-large;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        font-style: italic;
+    }
+    .parent{
+        display: flex;
+        height: 800px;
+        width: 800px;
+        background-color: aqua;
+        justify-content: space-around;
+        align-items: center;
+    flex-direction: column;
+    border-width: 3px;
+    border-color: brown;
+    border-style: dashed;
+    border: 5px  solid black;
+    
+    border-radius: 60px;
+    
+    }
+    .child1{
+        height: 150px;
+        width: 150px;
+        background-color: rgb(217, 255, 0);
+        text-align: center;
+        
+     }
+     .child2{
+        height: 150px;
+        width: 150px;
+        background-color: blueviolet;
+     }
+     .child3{
+        height: 150px;
+        width: 150px;
+        background-color: black;
+     }

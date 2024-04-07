@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            align-items: center;
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(30,30,30);
+            margin-top: 25px;
+        }
+        .patu{
+
+            display: grid;
+            
+            /* grid-template-columns: repeat(3, 1 fr); */
+            gap: 30px;
+            background-color: aqua;
+            width: 600px;
+            height: 400px;
+            align-items: center;
+            flex-direction: row;
+        }
+        .tanu{
+            align-items: center;
+            display: flex;
+            justify-content: space-around;
+            margin: 0;
+            padding: 0;
+        }
+        .lala{
+            align-items: center;
+            display: flex;
+            justify-content: space-around;
+        }
+        .button{
+           
+            text-decoration: none;
+            width: 120px;
+            height: 60px;
+            border-radius: 60px;
+            background-color: rgb(197, 244, 12);
+           
+        }
+
+        .button1:hover{
+            color: aqua;
+            background-color: aliceblue;
+            animation-delay: 2s;
+        }
+        .button2:hover{
+            
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color:transparent;
+            -webkit-text-stroke: 3px black;
+        background-image: linear-gradient(to right bottom, rgb(234, 105, 40), white, green);
+            
+        }
+        
+        .button3:hover{
+            font-size: xx-large;
+            text-shadow: rgb(111, 178, 10);
+            background: #dd303c;
+            text-decoration: dotted;
+
+        }
+        .button4:hover{
+            position: relative;
+            width: 150px;
+            padding: 15px 0;
+            text-align: center;
+            margin: 20px 10px ;
+            font-weight: bold;
+            border: 2px solid #3eff37;
+            background: transparent;
+            color: #fff;
+            cursor: pointer;
+            overflow: hidden;
+            text-transform: uppercase;
+            transform: scale(1.3);
+
+        }
+        
+        
+        .button5:hover{
+            width: 200;
+            height: 80;
+            font-weight: lighter;
+            border: purple;
+            text-transform: uppercase;
+            background: rgb(244, 198, 114);
+            font-size: larger;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            border: 4px solid rgb(12, 12, 127);
+        }
+        .button6:hover{
+            text-decoration: line-through;
+            width: 300;
+            height: 100;
+            font-weight: 100;
+            font-size: larger;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <div class="patu">
+        <div class="tanu">
+        <button class="button button1">Button1</button>
+
+        <button class="button button2">Button2</button>
+
+        <button class="button button3">Button3</button>
+    </div>
+    <div class="lala">
+        <button class="button button4">Button4</button>
+
+        <button class="button button5">Button5</button>
+
+        <button class="button button6">Button6</button>
+    </div>
+    </div>
+    
+</body>
+</html>
