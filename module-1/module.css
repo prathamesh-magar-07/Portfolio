@@ -14,7 +14,7 @@ body{
     
 }
 .container{
-    background-image: url(/module-1/img2/bg.jpg);
+    background-image: url(./module-1/img2/bg.jpg);
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: white;
     background-repeat: no-repeat;
@@ -38,7 +38,7 @@ body{
     border-radius: 3px;
 }
 .container2{
-    background-image: url(/module-1/img2/427\ \(1\).jpg);
+    background-image: url(./module-1/img2/427\ \(1\).jpg);
     font-family: Georgia, 'Times New Roman', Times, serif;
     color:white;
     background-repeat: no-repeat;
@@ -50,7 +50,7 @@ body{
     text-align: center;
 }
 .container3{
-    background-image: url(/module-1/img2/container3.jpg);
+    background-image: url(./module-1/img2/container3.jpg);
     font-family: Georgia, 'Times New Roman', Times, serif;
     color:white;
     background-repeat: no-repeat;
