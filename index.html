@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prathamesh Santosh Magar</title>
+  <link rel="stylesheet" href="style.css"> 
+
+  <style>
+  .Prathamesh {
+          margin-bottom: 40px;
+          background-color: #fff;
+          padding: 40px;
+          border-radius: 12px;
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          text-align: right;
+          justify-content: space-between;
+      }
+
+      .Prathamesh .profile-img {
+          margin-right: 40px;
+          margin-bottom: 0;
+      }
+
+      .Prathamesh p {
+          font-size: 1.2em;
+          line-height: 1.6;
+          color: #666;
+      }
+      .Prathamesh p:hover{
+        color: aqua;
+      }
+       .activities {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 30px;
+          border-radius: 63px;
+background: #e0e0e0;
+box-shadow: inset 40px 40px 58px #bebebe,
+            inset -40px -40px 58px #ffffff;
+      }
+
+      .activity {
+          background-color: #fff;
+          padding: 30px;
+          border-radius: 12px;
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease;
+          text-align: center;
+          position: relative;
+          overflow: hidden;
+          animation: slideIn 0.5s ease;
+      }
+
+      @keyframes slideIn {
+          from {
+              opacity: 0;
+              transform: translateY(20px);
+          }
+
+          to {
+              opacity: 1;
+              transform: translateY(0);
+          }
+      }
+
+      .activity::before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 123, 255, 0.1);
+          z-index: 0;
+          transition: opacity 0.3s ease;
+          opacity: 0;
+      }
+
+      .activity:hover::before {
+          opacity: 1;
+      }
+
+      .activity h2 {
+          color: #333;
+          font-size: 1.8em;
+          position: relative;
+          z-index: 1;
+      }
+
+      .activity p {
+          color: #666;
+          font-size: 1.2em;
+          position: relative;
+          z-index: 1;
+      }
+
+      .activity button {
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          border-radius: 25px;
+          padding: 12px 25px;
+          margin-top: 20px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          font-size: 1.1em;
+          outline: none;
+      }
+
+      .activity button:hover {
+          background-color: #f720de;
+      }
+      .additional-section {
+          background-color: #fff;
+          padding: 40px;
+          border-radius: 12px;
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+          margin-top: 40px;
+          text-align: center;
+      }
+
+      .additional-section h2 {
+          color: #333;
+          font-size: 2em;
+      }
+
+      .additional-section p {
+          color: #666;
+          font-size: 1.2em;
+          margin-top: 20px;
+      }
+</style>
+
+ </head>
+<body>
+  <header>
+    <marquee  direction="right"><h1 style="font-size: x-large;">Prathamesh Santosh Magar</h1></marquee>
+    <p>Portfolio</p>
+    <nav>
+      <ul>
+        <li><a href="#home">Home </a></li>
+        <li><a href="#about Me">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="Prathamesh">
+        
+        <img src="./img/patu.jpg" alt="Your photo" height="250px" width="500px">
+        
+
+      <p>I'm a passionate web developer with a strong interest in [mention specific areas of interest in web development, e.g., front-end development, back-end development, full-stack development]. I'm skilled in [list some of your key skills, e.g., HTML, CSS, JavaScript].</p>
+    </div>
+    </section>
+
+    <div class="activities" id="activities">
+      <section id="projects">
+
+      <div class="activity activity1">
+          <h2><a href="./module-1/module1.html" target="_blank">Web Development </a></h2>
+          <p>
+            Web development refers to the creating, building, and maintaining of websites. It includes aspects such as web design, web publishing, web programming, and database management. It is the creation of an application that works over the internet 
+          </p>
+          <!-- <button>View More</button> -->
+      </div>
+      </section>
+
+      <div class="activity activity2">
+          <h2>3D DESIGN</h2>
+          <p>
+            3D design refers to using software to create a digital model of a three-dimensional shape or object. 
+          </p>
+          <button>View More</button>
+      </div>
+
+      <div class="activity activity3">
+          <h2>LASER CUTTING</h2>
+          <p>
+            Laser cutting is a technology that uses a laser to vaporize materials, resulting in a cut edge. While typically used for industrial manufacturing applications, it is now used by schools, small businesses, architecture, and hobbyists
+          </p>
+          <button>View More</button>
+      </div>
+
+      <div class="activity activity4">
+          <h2>3D PRINTING</h2>
+          <p>
+            3D printing or additive manufacturing is the construction of a three-dimensional object from a CAD model or a digital 3D model.
+          </p>
+          <button>View More</button>
+      </div>
+
+      <div class="activity activity5">
+          <h2>Interface & Application</h2>
+          <p>
+            An application interface also referred to as an application programming interface (API) is a set of rules and protocols that describes how two software programs or systems communicate with each other. 
+          </p>
+          <button>View More</button>
+      </div>
+
+      <div class="activity activity6">
+          <h2>IOT & EMBEDED PROGROMS</h2>
+          <p>
+            It is essential to know about the embedded devices while learning the IoT or building the projects on IoT. The embedded devices are the objects that build the unique computing system.
+          </P>
+          <button>View More</button>
+      </div>
+
+      <div class="activity activity7">
+          <h2>PCB MAKING</h2>
+          <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut quam sapien. Nulla facilisi.
+          </p>
+          <button>View More</button>
+      </div>
+
+      <div class="activity activity8">
+         <h2>Additional Section</h2>
+      <p>
+          This is an additional section added to the portfolio. You can add more information, projects, or any other content here.
+      </p>
+      <button>View More</button>
+      </div>
+
+  </div>
+
+  <!-- Additional Section
+  <div class="additional-section">
+      <h2>Additional Section</h2>
+      <p>
+          This is an additional section added to the portfolio. You can add more information, projects, or any other content here.
+      </p>
+  </div>  -->
+
+    <!-- <div class="button1">
+    <section id="education">
+      <h2>SSC</h2>
+      <button style="align-items: center;" id="btn1">Click Here </button>
+      <h2>HSC</h2>
+      <button style="align-items: center;" id="btn1">Click Here</button>
+      <H2>BE</H2>
+      <button style="align-items: center;" id="btn1">Click Here</button>
+    </section>
+    </div>
+    -->
+
+    <!-- <section id="portfolio">
+      <h2>Portfolio</h2>
+      <p>Showcase your projects here. You can use images, descriptions, and links to live demos.</p>
+    </section> -->
+    <div class="agreement" >
+      <a href="./agreement/Fab_Academy_Student_Agreement[1].txt" target="_blank"><h4 style="text-align: center;">Fab lab Student agreement</h4></a>
+      
+     </div>
+
+     <div class="cantact"><section id="contact">
+      <h2>Contact</h2>
+      <p style="text-align: center;">Name-Prathamesh Magar <br>
+      Mobile No-8459329082 <br>
+     </p>
+     <p style="text-align: center;" ><a href="https://www.instagram.com/invites/contact/?i=1whzilq6ojv8t&utm_content=inaenne">Instagram</a></p>
+     <p style="text-align: center;"><a href="https://www.linkedin.com/in/prathamesh-magar-9b4229289">Linkedin</a>
+
+     </p>
+    </section>
+     </div>
+     
+  </main>
+
+
+  <footer>
+    <p>&copy; 2024 Prathamesh</p>
+  </footer>
+</body>
+</html>

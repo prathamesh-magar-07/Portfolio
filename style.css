@@ -1,0 +1,181 @@
+html, body, h1, h2, h3, p, ul, li{
+margin: 0;
+padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+.Prathamesh:hover{
+    background-image: url(./img/about.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+
+
+}
+/* .Prathamesh p:hover{
+    color: aqua;
+} */
+
+header {
+    background-color: #5bb4ee;
+    padding: 15px;
+}
+header p{
+    font-size: larger;
+    font-weight: bold;
+    color: white;
+}
+
+header h1{
+    margin: 0;
+    font-size: 2cm;
+    text-align: center;
+    color: #fff;
+}
+
+header nev{
+    display: flex;
+    justify-content: center;
+}
+header nav ul{
+    list-style: none;
+    display: flex;
+}
+header nav ul li{
+    margin: 0 10px;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: #ddd;
+    font-weight: 600;
+}
+header nav ul li a:hover{
+    color: #ddd;
+}
+main h2{
+    margin: 20px 0 10px;
+    font-size: 1cm;
+    text-align: center;
+    color: #17f2f6;
+    
+}
+
+main h3{
+    margin: 10px 0;
+    font-size: 1.2cm;
+    color: #0077c9;
+}
+main p{
+    margin: 10px 0;
+}
+
+.activity1:hover{
+    background-image: url(./img/WEB.jpeg);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+.activity2:hover{
+    background-image: url(./img/3D\ DESIGN.jpeg);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+.activity3:hover{
+    background-image: url(./img/LEASER.jpeg);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+.activity4:hover{
+    background-image: url(./img/3D\ PRINT.jpeg);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+.activity6:hover{
+    background-image: url(./img/IOT.jpeg);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+.activity7:hover{
+    background-image: url(./img/PCB.jpeg);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+.button1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./img/college.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: auto;
+  
+    margin: 0 auto;
+   
+}
+#btn1{
+    
+    color: #f10d0d;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 25px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.1em;
+    outline: none;
+    
+}
+#btn1:hover{
+    background-color: #0dbcf1;
+
+}
+.agreement{
+    font-size: large;
+}
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   text-align: center;
+  
+}
+#contact:hover{
+    background-image: url(./img/cantact.jpeg);
+    max-width: auto;
+    max-height: auto;
+    background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+ 
+}
+#about{
+    background-image: url(./img/about.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+
+}
+
+footer{
+    background-color: #0077c9;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+footer p{
+    margin: 0;
+    font-size: 0.8cm;
+}

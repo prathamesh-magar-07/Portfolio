@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="clock-container">
+        <div class="clock" id="newyork">
+            <div class="clock-inner">
+                <div class="clock-face">New York</div>
+                <div class="clock-time" id="time-newyork"></div>
+            </div>
+        </div>
+        <div class="clock" id="london">
+            <div class="clock-inner">
+                <div class="clock-face">London</div>
+                <div class="clock-time" id="time-london"></div>
+            </div>
+        </div>
+        <div class="clock" id="tokyo">
+            <div class="clock-inner">
+                <div class="clock-face">Tokyo</div>
+                <div class="clock-time" id="time-tokyo"></div>
+            </div>
+        </div>
+        <div class="clock" id="india">
+            <div class="clock-inner">
+                <div class="clock-face">India</div>
+                <div class="clock-time" id="time-india"></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="select-timezone">
+        <label for="timezone">Select Timezone:</label>
+        <select id="timezone">
+            <option value="newyork">New York</option>
+            <option value="london">London</option>
+            <option value="tokyo">Tokyo</option>
+            <option value="India">India</option>
+        </select>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
