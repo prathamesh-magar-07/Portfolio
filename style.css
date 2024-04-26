@@ -9,124 +9,207 @@ body{
     line-height: 1.5;
     color: #333;
 }
-.Prathamesh:hover{
+/* .Prathamesh:hover{
     background-image: url(./img/about.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     
+ */
 
-
-}
+/* } */
 /* .Prathamesh p:hover{
     color: aqua;
 } */
 
-header {
-    background-color: #5bb4ee;
-    padding: 15px;
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-color: #cedee3;
+    
+    
 }
-header p{
-    font-size: larger;
-    font-weight: bold;
-    color: white;
+nav a{
+    position: relative;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
 }
-
-header h1{
-    margin: 0;
-    font-size: 2cm;
-    text-align: center;
-    color: #fff;
+nav a:after{
+    content: "";
+    position: absolute;
+    background-color: #ff3c78;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;   
+    transition: 0.3s;
 }
-
-header nev{
+nav a:hover:after{
+    width: 100%;
+}
+nav ul{
     display: flex;
     justify-content: center;
+
 }
-header nav ul{
+nav ul li{
     list-style: none;
-    display: flex;
+    margin: 25px;
+    font-size: 1.15rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
-header nav ul li{
-    margin: 0 10px;
-}
-header nav ul li a {
+nav ul li a{
     text-decoration: none;
-    color: #ddd;
-    font-weight: 600;
+   color: rgb(34, 7, 118);
 }
-header nav ul li a:hover{
-    color: #ddd;
+.left{
+    font-size: 1.8rem;
+    font-family: 'Times New Roman', Times, serif;
 }
+
 main h2{
     margin: 20px 0 10px;
     font-size: 1cm;
     text-align: center;
-    color: #17f2f6;
+    color: #3bbd98;
     
 }
 
-main h3{
+
+/* main h3{
     margin: 10px 0;
     font-size: 1.2cm;
     color: #0077c9;
-}
+} */
 main p{
     margin: 10px 0;
 }
 
-.activity1:hover{
-    background-image: url(./img/WEB.jpeg);
-    background-repeat: no-repeat;
-    background-size: contain;
-
-}
-.activity2:hover{
-    background-image: url(./img/3D\ DESIGN.jpeg);
-    background-repeat: no-repeat;
-    background-size: contain;
-
-}
-.activity3:hover{
-    background-image: url(./img/LEASER.jpeg);
-    background-repeat: no-repeat;
-    background-size: contain;
-
-}
-.activity4:hover{
-    background-image: url(./img/3D\ PRINT.jpeg);
-    background-repeat: no-repeat;
-    background-size: contain;
-
-}
-.activity6:hover{
-    background-image: url(./img/IOT.jpeg);
-    background-repeat: no-repeat;
-    background-size: contain;
-
-}
-.activity7:hover{
-    background-image: url(./img/PCB.jpeg);
-    background-repeat: no-repeat;
-    background-size: contain;
-
-}
-.button1{
+.Prathamesh {
+    margin-bottom: 40px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: center;
     align-items: center;
-    background-image: url(./img/college.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    max-width: auto;
-  
-    margin: 0 auto;
-   
+    justify-content: flex-start;
+    text-align: right;
+    justify-content: space-between;
 }
-#btn1{
-    
-    color: #f10d0d;
+
+.Prathamesh .profile-img {
+    margin-right: 40px;
+    margin-bottom: 0;
+}
+
+.Prathamesh p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #666;
+}
+.Prathamesh p:hover{
+  color: aqua;
+}
+
+ .activities {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    border-radius: 63px;
+background: #e0e0e0;
+box-shadow: inset 50px 50px 68px #1B2A34,
+      inset -50px -50px 68px #1B2A34;
+}
+ 
+.activity{
+    background-color: #fff;
+    margin: 50px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: auto;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.activity::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 400%;
+    height: 400%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s;
+    z-index: 1;
+    transform: rotate(45deg);
+}
+.activity:hover::before {
+    top: 0;
+    left: 0;
+}
+.activity:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    background-color: #474445;
+    color: #f5e90c;
+}
+
+
+
+.activity {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.activity h2 {
+   
+    font-size: 1.8em;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+.activity p {
+
+    font-size: 1.2em;
+    position: relative;
+    z-index: 1;
+}
+
+.activity button {
+    /* background-color: #007bff;
+    color: #fff;
     border: none;
     border-radius: 25px;
     padding: 12px 25px;
@@ -134,32 +217,139 @@ main p{
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-size: 1.1em;
-    outline: none;
-    
+    outline: none; */
+    padding: 0.8em 1.8em;
+border: 3px solid #170382;
+position: relative;
+overflow: hidden;
+background-color: transparent;
+text-align: center;
+text-transform: uppercase;
+font-size: 14px;
+-webkit-transition: .3s;
+transition: .3s;
+z-index: 1;
+font-family: inherit;
+color: #170382;
 }
-#btn1:hover{
-    background-color: #0dbcf1;
 
+button::before {
+content:""; 
+width: 0;
+height: 300%;
+position: absolute;
+top: 50%; 
+left: 50%;
+-webkit-transform:
+translate(-50%,-50%) rotate(45deg);
+-ms-transform:
+translate(-50%,-50%) rotate(45deg);
+transform:
+translate(-50%,-50%) rotate(45deg);
+background: #f7f176;
+-webkit-transition: 5s ease;
+transition: .5s ease;
+display: block; 
+z-index: -1;
 }
+button:hover::before {
+
+width: 105%;
+}
+button:hover{ 
+    color: #1B2A34;
+}
+
+
+.additional-section {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    text-align: center;
+}
+
+.additional-section h2 {
+    color: #333;
+    font-size: 2em;
+}
+
+.additional-section p {
+    color: #666;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+
+
 .agreement{
     font-size: large;
 }
-.contact{
+
+.contact-info {
+    max-width: 600px;
+    margin-bottom: 100px;
+    margin-left: 30%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info ul li .icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #007bff;
+    border-radius: 50%;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-info ul li .icon i {
+    color: #fff;
+    font-size: 20px;
+}
+
+.contact-info ul li:hover {
+    transform: translateY(-3px);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/* .contact{
     display: flex;
     justify-content: center;
     align-items: center;
    text-align: center;
   
-}
-#contact:hover{
-    background-image: url(./img/cantact.jpeg);
-    max-width: auto;
-    max-height: auto;
-    background-repeat: no-repeat;
-     background-position: center;
-     background-size: cover;
- 
-}
+} */
+
 #about{
     background-image: url(./img/about.jpeg);
     background-repeat: no-repeat;
@@ -168,14 +358,34 @@ main p{
     
 
 }
+.agreement a{
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    color: #ff0000;
+}
 
-footer{
-    background-color: #0077c9;
-    padding: 20px;
+
+.agreement{
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+#contact{
     text-align: center;
+    font-size: x-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 100px;
+}   
+
+footer {
+    background-color: #333;
     color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
 }
-footer p{
-    margin: 0;
-    font-size: 0.8cm;
-}
+

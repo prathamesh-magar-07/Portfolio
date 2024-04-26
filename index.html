@@ -3,179 +3,292 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Prathamesh Santosh Magar</title>
   <link rel="stylesheet" href="style.css"> 
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> -->
 
-  <style>
-  .Prathamesh {
-          margin-bottom: 40px;
-          background-color: #fff;
-          padding: 40px;
-          border-radius: 12px;
-          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-          display: flex;
-          align-items: center;
-          justify-content: flex-start;
-          text-align: right;
-          justify-content: space-between;
-      }
+<style>
 
-      .Prathamesh .profile-img {
-          margin-right: 40px;
-          margin-bottom: 0;
-      }
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Satisfy&display=swap');
+  
 
-      .Prathamesh p {
-          font-size: 1.2em;
-          line-height: 1.6;
-          color: #666;
-      }
-      .Prathamesh p:hover{
-        color: aqua;
-      }
-       .activities {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 30px;
-          border-radius: 63px;
-background: #e0e0e0;
-box-shadow: inset 40px 40px 58px #bebebe,
-            inset -40px -40px 58px #ffffff;
-      }
+  .first{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 120px 0;
+   
+  }
+  
+  .first >div{
+    width: 30%;
+  }
+  .second{
+    margin-top: 150px;
+  }
+  .leftsec{
+   
+    width: 34px;
+    font-size: 2.8rem;
+    
+  }
+  .rightsec img{
+    /* background-color: aqua; */
+    width: 100%;
+    margin: 50px 0;
+    animation: floatImage 4s ease-in-out infinite;
+  }
 
-      .activity {
-          background-color: #fff;
-          padding: 30px;
-          border-radius: 12px;
-          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-          transition: transform 0.3s ease;
-          text-align: center;
-          position: relative;
-          overflow: hidden;
-          animation: slideIn 0.5s ease;
-      }
+  @keyframes floatImage{
+    0%{
+      transform: translateY(0);
+    }
+    50%{
+      transform: translateY(-2.4rem);
+    }
+    100%{
+      transform: translateY(0);
+    }
+  }
 
-      @keyframes slideIn {
-          from {
-              opacity: 0;
-              transform: translateY(20px);
-          }
+  .purple{
+    color: rgb(169, 6, 169);
+  }
+  #element{
+    color: rgb(19, 7, 128);
+  }
+  
+  .aboutme ul li{
+    text-align: left;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin: 20px 40px;
+    margin-left: 80px;
+  }
 
-          to {
-              opacity: 1;
-              transform: translateY(0);
-          }
-      }
+  .aboutme{
+    background-color: antiquewhite;
+    border-radius: 10px;
+    margin: 50px;
+  }
 
-      .activity::before {
-          content: '';
-          display: block;
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: rgba(0, 123, 255, 0.1);
-          z-index: 0;
-          transition: opacity 0.3s ease;
-          opacity: 0;
-      }
+  
+  .second h2{
+    max-width: 80;
+    margin: 0 40%;
+    color: blueviolet;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
 
-      .activity:hover::before {
-          opacity: 1;
-      }
+.gray{
+  color: gray;
+  display: flex;
+  margin-bottom: 40px;
+  justify-content: center;
+}
 
-      .activity h2 {
-          color: #333;
-          font-size: 1.8em;
-          position: relative;
-          z-index: 1;
-      }
+  main hr{
+    border: 0; 
+    background: rgb(4, 4, 122); 
+    height: 3px; 
+    margin: 60px 180px;
+  }
 
-      .activity p {
-          color: #666;
-          font-size: 1.2em;
-          position: relative;
-          z-index: 1;
-      }
+  .phone-no a{
+    color: rgb(71, 138, 254);
+  }
+  .address a{
+    color: rgb(18, 178, 18);
+  }
+  .insta a{
+    color: rgb(254, 86, 206);
+  }
+  .facebook a{
+    color: rgb(2, 2, 166);
+  }
+  .linkedin a{
+    color: rgb(54, 54, 203);
+  }
+  .gmail a{
+    color: rgb(237, 26, 26);
+  }
+  .con h3{
+    font-size: 1.6rem;
+  }
+  .con h2{
+    align-items: center;
+    padding-right: 20vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(226, 43, 183);
+  }
 
-      .activity button {
-          background-color: #007bff;
-          color: #fff;
-          border: none;
-          border-radius: 25px;
-          padding: 12px 25px;
-          margin-top: 20px;
-          cursor: pointer;
-          transition: background-color 0.3s ease;
-          font-size: 1.1em;
-          outline: none;
-      }
+  .con{
+    height:fit-content;
+    display: flex;
+    flex-direction: column;
+    padding-left: 15vw;
+    margin-bottom: 70px;
+  }
+  
+  .con div{
+    display: flex;
+    align-items: center;
+  }
+  .con a{
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border-radius: 25%;
+    font-size: 3rem;
+    transition: .5s ease;
+    align-items: center;
 
-      .activity button:hover {
-          background-color: #f720de;
-      }
-      .additional-section {
-          background-color: #fff;
-          padding: 40px;
-          border-radius: 12px;
-          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-          margin-top: 40px;
-          text-align: center;
-      }
+  }
+  .ab{
 
-      .additional-section h2 {
-          color: #333;
-          font-size: 2em;
-      }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
 
-      .additional-section p {
-          color: #666;
-          font-size: 1.2em;
-          margin-top: 20px;
-      }
+  }
+  /* .bgimage{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(./img/mountain_bg.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .bgimage::after{
+    content: '';
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, 0.55);
+  } */
+  .section{
+    height: 100vh;
+  }
+  .content h1{
+    margin-top: 140px;
+  }
+  .content{
+    background-image: url(./img/mountain_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-size: 3rem;
+    font-family:  "Satisfy", cursive;
+    z-index: 5;
+  }
+
+  .content i{
+    font-size: 2rem;
+    margin-top: 100px;
+    color: white;
+    animation: floatImage 4s ease-in-out infinite;
+  }
+  
+  @keyframes floatImage{
+    0%{
+      transform: translateY(0);
+    }
+    50%{
+      transform: translateY(-2.4rem);
+    }
+    100%{
+      transform: translateY(0);
+    }
+  }
+  /* .im{
+margin-left:0;
+-webkit-transition:6s;
+ } */
 </style>
 
  </head>
 <body>
-  <header>
-    <marquee  direction="right"><h1 style="font-size: x-large;">Prathamesh Santosh Magar</h1></marquee>
-    <p>Portfolio</p>
+  <!-- <header>
+<h1 style="font-size: xx-large;">Prathamesh Santosh Magar</h1> -->
+    <!-- <p>Portfolio</p> -->
+    <header>
     <nav>
-      <ul>
-        <li><a href="#home">Home </a></li>
-        <li><a href="#about Me">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <div class="left">FABLAB, SSGMCE</div>
+      <div class="right">
+        <ul>
+        <li><a href="#xy">Home </a></li>
+        <li><a href="#psm">About Me</a></li>
+        <li><a href="#second">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>  
+       </ul>
+      </div>
     </nav>
   </header>
+  
 
   <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <div class="Prathamesh">
-        
-        <img src="./img/patu.jpg" alt="Your photo" height="250px" width="500px">
-        
-
-      <p>I am Prathamesh Santosh Magar I am pursuing my BE in Electronics and Telecommunication Enggineering <br>
-        2023-2024 <br>
-        College-Shri Sant Gajanan Maharaj College of Enggineering, Shegaon <br>
-        I'm a passionate web developer with a strong interest in  front-end development, back-end development, full-stack development. I'm skilled in HTML, CSS, JavaScript.</p>
-    </div>
+   
+    <section class="ab" id="xy">
+      <div class="content">
+        <h1>Pratamesh Santosh Magar</h1>
+      <a class="im" href="#psm"><i class="fa-solid fa-arrow-down"></i></a>
+      </div>
     </section>
+    <hr id="psm">
+    <section class="first" id="first">
+        <div class="leftsec">
+          Hi, My name is <span class="purple">Prathamesh Magar</span>
+          <div> and I am a </div>
+          <span id="element"></span>
+        </div>
+        <div class="rightsec">
+         <img src="./img/patu.jpg" alt="">
+        </div>
+    </section>
+    <hr >
+
+    <section id="aboutme">
+      <div class="aboutme">
+        <h2>About Me</h2>
+      <ul>
+        <li><h3>City</h3>- Akot</li>
+        <li><h3>Age</h3>- 18</li>
+        <li><h3>College</h3>- Shri Sant Gajanan Maharaj College of Engineering,Shegaon </li>
+        <li><h3>Degree</h3>- Electronic & Telecommunication Enggineering (pursuing)</li><br>
+        
+      </ul>
+      </div>
+    </section>
+    <hr id="second">
+
+    <section class="second">
+      <h2>Modules</h2>
+      <span class="gray">What projects going on</span>
+    </section>
+    
+
 
     <div class="activities" id="activities">
       <section id="projects">
 
       <div class="activity activity1">
-          <h2><a href="./module-1/module1.html" target="_blank">Web Development </a></h2>
+          <h2>Web Development </h2>
           <p>
             Web development refers to the creating, building, and maintaining of websites. It includes aspects such as web design, web publishing, web programming, and database management. It is the creation of an application that works over the internet 
           </p>
-          <!-- <button>View More</button> -->
+          <a href="./module-1/module1.html" target="_blank"><button><h3 style="font-size: larger;">View More</h3></button></a>
       </div>
       </section>
 
@@ -184,7 +297,7 @@ box-shadow: inset 40px 40px 58px #bebebe,
           <p>
             3D design refers to using software to create a digital model of a three-dimensional shape or object. 
           </p>
-          <button>View More</button>
+          <a href="./module-2/module2.html" target="_blank"><button><h3 style="font-size: larger;">View More</h3></button></a>
       </div>
 
       <div class="activity activity3">
@@ -192,7 +305,7 @@ box-shadow: inset 40px 40px 58px #bebebe,
           <p>
             Laser cutting is a technology that uses a laser to vaporize materials, resulting in a cut edge. While typically used for industrial manufacturing applications, it is now used by schools, small businesses, architecture, and hobbyists
           </p>
-          <button>View More</button>
+          <a href="./module-3/module3.html" target="_blank"><button><h3 style="font-size: larger;">View More</h3></button></a>
       </div>
 
       <div class="activity activity4">
@@ -200,15 +313,15 @@ box-shadow: inset 40px 40px 58px #bebebe,
           <p>
             3D printing or additive manufacturing is the construction of a three-dimensional object from a CAD model or a digital 3D model.
           </p>
-          <button>View More</button>
-      </div>
+          <a href="./module-4/module4.html" target="_blank"><button><h3 style="font-size: larger;">View More</h3></button>
+          </div></a>
 
       <div class="activity activity5">
           <h2>Interface & Application</h2>
           <p>
             An application interface also referred to as an application programming interface (API) is a set of rules and protocols that describes how two software programs or systems communicate with each other. 
           </p>
-          <button>View More</button>
+          <button><h3 style="font-size: larger;">View More</h3></button>
       </div>
 
       <div class="activity activity6">
@@ -216,73 +329,104 @@ box-shadow: inset 40px 40px 58px #bebebe,
           <p>
             It is essential to know about the embedded devices while learning the IoT or building the projects on IoT. The embedded devices are the objects that build the unique computing system.
           </P>
-          <button>View More</button>
+          <button><h3 style="font-size: larger;">View More</h3></button>
       </div>
 
       <div class="activity activity7">
           <h2>PCB MAKING</h2>
           <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut quam sapien. Nulla facilisi.
+            PCB (Printed Circuit Board) making involves designing, manufacturing, and assembling electronic circuits.
           </p>
-          <button>View More</button>
+          <button><h3 style="font-size: larger;">View More</h3></button>
       </div>
 
       <div class="activity activity8">
-         <h2>Additional Section</h2>
+        <h2>AI & ML</h2>
+        <p>
+          AI and ML, or artificial intelligence and machine learning, are both cutting-edge fields in computer science with significant overlap but distinct focuses.
+        </p>
+        <button><h3 style="font-size: larger;">View More</h3></button>
+      </div>
+
+      <div class="activity activity9">
+         <h2>Final Project</h2>
+         
       <p>
-          This is an additional section added to the portfolio. You can add more information, projects, or any other content here.
+          
       </p>
-      <button>View More</button>
+      <button><h3 style="font-size: larger;">View More</h3></button>
       </div>
 
   </div>
+  <hr>
 
-  <!-- Additional Section
-  <div class="additional-section">
-      <h2>Additional Section</h2>
-      <p>
-          This is an additional section added to the portfolio. You can add more information, projects, or any other content here.
-      </p>
-  </div>  -->
 
-    <!-- <div class="button1">
-    <section id="education">
-      <h2>SSC</h2>
-      <button style="align-items: center;" id="btn1">Click Here </button>
-      <h2>HSC</h2>
-      <button style="align-items: center;" id="btn1">Click Here</button>
-      <H2>BE</H2>
-      <button style="align-items: center;" id="btn1">Click Here</button>
-    </section>
-    </div>
-    -->
 
-    <!-- <section id="portfolio">
-      <h2>Portfolio</h2>
-      <p>Showcase your projects here. You can use images, descriptions, and links to live demos.</p>
-    </section> -->
     <div class="agreement" >
-      <a href="./agreement/Fab_Academy_Student_Agreement[1].txt" target="_blank"><h4 style="text-align: center;">Fab lab Student agreement</h4></a>
+      <a href="./agreement/Fab_Academy_Student_Agreement[1].txt" target="_blank"><h4>Fab lab Student agreement</h4></a>
       
      </div>
+     <hr>
 
-     <div class="cantact"><section id="contact">
+     
+     <div class="con" id="contact">
       <h2>Contact</h2>
-      <p style="text-align: center;">Name-Prathamesh Magar <br>
+      <div class="phone-no">
+        <a href=""><i class="fa-solid fa-phone fa-sm"></i></a><h3>8459329082</h3>
+      </div>
+      <div class="address">
+        <a href="https://maps.app.goo.gl/8nPCYPjFn3rctEPE6?g_st=aw" target="_blank"><i class="fa-solid fa-location-dot"></i></a><h3>At Post Pimpri Khurd, Akot, Akola </h3>
+      </div>
+      <div class="insta">
+        <a href="https://www.instagram.com/invites/contact/?i=1whzilq6ojv8t&utm_content=inaenne" target="_blank"><i class="fa-brands fa-instagram"></i></a><h3>prathamesh_magar_07</h3>
+      </div>
+      <div class="facebook">
+        <a href="https://www.facebook.com/prathamesh.magar.94?mibextid=ZbWKwL" target="_blank"><i class="fa-brands fa-facebook"></i></a><h3>Prathamesh Magar</h3>
+      </div>
+      <div class="linkedin">
+        <a href="https://www.linkedin.com/in/prathamesh-magar-9b4229289" target="_blank"><i class="fa-brands fa-linkedin"></i></a><h3>Prathamesh Magar</h3>
+      </div>
+      <div class="gmail">
+        <a href="prathameshmagar10@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a><h3>prathameshmagar10@gmail.com</h3>
+      </div>
+
+     </div>
+
+     <!-- <div class="contact-info">
+      <h2>Contact Information</h2>
+      <ul>
+          <li><span class="icon"><i class="fas fa-user"></i></span>Prathamesh Magar</li>
+          <li><span class="icon"><i class="fas fa-envelope"></i></span>prathameshmagar10@gmail.com</li>
+          <li><span class="icon"><i class="fas fa-phone"></i></span> +91-8459329082</li>
+          <a href=""><li><span class="icon"><i class="fas fa-map-marker-alt"></i></span>Instagram</li>
+         <li><span class="icon"><i class="fas fa-map-marker-alt"></i></span><a href="">Linkedin</a></li>
+      </ul>
+  </div> -->
+
+     <!-- <div class="contact"><section id="contact">
+      <h2>Contact</h2>
+      <p>Name-Prathamesh Magar <br>
       Mobile No-8459329082 <br>
      </p>
-     <p style="text-align: center;" ><a href="https://www.instagram.com/invites/contact/?i=1whzilq6ojv8t&utm_content=inaenne">Instagram</a></p>
-     <p style="text-align: center;"><a href="https://www.linkedin.com/in/prathamesh-magar-9b4229289">Linkedin</a>
+     <p><a href="https://www.instagram.com/invites/contact/?i=1whzilq6ojv8t&utm_content=inaenne">Instagram</a></p>
+     <p>
 
      </p>
     </section>
-     </div>
+     </div> -->
      
   </main>
 
 
   <footer>
-    <p>&copy; 2024 Prathamesh</p>
+    <p>&copy; Prathamesh Magar</p>
   </footer>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Engineering Student', 'Fablab Member', 'Photo Editor'],
+      typeSpeed: 70,
+    });
+  </script>
 </body>
 </html>
