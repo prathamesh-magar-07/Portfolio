@@ -216,6 +216,9 @@
 margin-left:0;
 -webkit-transition:6s;
  } */
+ html {
+    scroll-behavior: inherit;
+  }
 </style>
 
  </head>
@@ -243,9 +246,10 @@ margin-left:0;
     <section class="ab" id="xy">
       <div class="content">
         <h1>Pratamesh Santosh Magar</h1>
-      <a class="im" href="#psm"><i class="fa-solid fa-arrow-down"></i></a>
+        <a class="im" href="#psm"><i class="fa-solid fa-arrow-down"></i></a>
       </div>
     </section>
+    
     <hr id="psm">
     <section class="first" id="first">
         <div class="leftsec">
@@ -430,6 +434,72 @@ margin-left:0;
       loop: true // Enable looping
     });
 </script>
+<script>
+  // Function to handle medium smooth scrolling
+  function mediumScrollTo(element, targetY, duration) {
+    var startingY = window.pageYOffset;
+    var diff = targetY - startingY;
+    var startTime;
+
+    // Easing function for smoother scrolling
+    function easeInOutQuad(t, b, c, d) {
+      t /= d / 2;
+      if (t < 1) return c / 2 * t * t + b;
+      t--;
+      return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+
+    // Animation function
+    function animation(currentTime) {
+      if (startTime === undefined) startTime = currentTime;
+      var timeElapsed = currentTime - startTime;
+      var scrollTo = easeInOutQuad(timeElapsed, startingY, diff, duration);
+      window.scrollTo(0, scrollTo);
+      if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+
+    // Start animation
+    requestAnimationFrame(animation);
+  }
+
+  // Event listener for click on down arrow link
+  document.querySelector('.im').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    var targetSection = document.querySelector('#psm');
+    if (targetSection) {
+      var targetY = targetSection.getBoundingClientRect().top + window.pageYOffset;
+      mediumScrollTo(document.documentElement, targetY, 1000); // Call mediumScrollTo function with desired duration (in milliseconds)
+    }
+  });
+</script>
+<!-- <script>
+  // Function to handle smooth scrolling
+  function scrollToSection(sectionId) {
+    var targetSection = document.querySelector(sectionId);
+    if (targetSection) {
+      window.scrollTo({
+        top: targetSection.offsetTop,
+        behavior: 'smooth' // Smooth scroll behavior
+      });
+    }
+  }
+
+  // Event listener for click on down arrow link
+  document.querySelector('.im').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    scrollToSection('#psm'); // Call scrollToSection function with the target section id
+  });
+</script>
+<script>
+  // Event listener for click on down arrow link
+  document.querySelector('.im').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    var targetSection = document.querySelector('#psm');
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to target section
+    }
+  });
+</script> -->
 
 </body>
 </html>
