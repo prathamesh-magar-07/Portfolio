@@ -69,11 +69,11 @@ main {
     background-color: rgb(223, 215, 215);
 }
 .sec{
-    width: 850px;
+    width: 950px;
     height: 600px;
 }
 .sec3{
-    width: 850px;
+    width: 950px;
     height: 1000px;
 }
 
@@ -113,7 +113,7 @@ section {
     border-radius: 20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 850px;
+    width: 950px;
     height: 700px;
     transition: transform 0.3s;
 }

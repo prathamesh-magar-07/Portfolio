@@ -96,22 +96,22 @@
     margin: 60px 180px;
   }
 
-  .phone-no a{
+  .phone-no a i{
     color: rgb(71, 138, 254);
   }
-  .address a{
+  .address a i{
     color: rgb(18, 178, 18);
   }
-  .insta a{
+  .insta a i{
     color: rgb(254, 86, 206);
   }
-  .facebook a{
+  .facebook a i{
     color: rgb(2, 2, 166);
   }
-  .linkedin a{
+  .linkedin a i{
     color: rgb(54, 54, 203);
   }
-  .gmail a{
+  .gmail a i{
     color: rgb(237, 26, 26);
   }
   .con h3{
@@ -119,33 +119,10 @@
   }
   .con h2{
     align-items: center;
-    padding-right: 20vw;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: rgb(226, 43, 183);
-  }
+  } 
 
-  .con{
-    height:fit-content;
-    display: flex;
-    flex-direction: column;
-    padding-left: 15vw;
-    margin-bottom: 70px;
-  }
-  
-  .con div{
-    display: flex;
-    align-items: center;
-  }
-  .con a{
-    width: 4rem;
-    height: 4rem;
-    background: transparent;
-    border-radius: 25%;
-    font-size: 3rem;
-    transition: .5s ease;
-    align-items: center;
-
-  }
   .ab{
 
     margin: 0;
@@ -154,24 +131,7 @@
     font-family: sans-serif;
 
   }
-  /* .bgimage{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-image: url(./img/mountain_bg.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .bgimage::after{
-    content: '';
-    position: relative;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgb(0, 0, 0, 0.55);
-  } */
+ 
   .section{
     height: 100vh;
   }
@@ -376,22 +336,22 @@ margin-left:0;
      <div class="con" id="contact">
       <h2>Contact</h2>
       <div class="phone-no">
-        <a href=""><i class="fa-solid fa-phone fa-sm"></i></a><h3>8459329082</h3>
+      <a href="#"><i class="fa-solid fa-phone fa-sm"></i><h3>8459329082</h3></a>
       </div>
       <div class="address">
-        <a href="https://maps.app.goo.gl/8nPCYPjFn3rctEPE6?g_st=aw" target="_blank"><i class="fa-solid fa-location-dot"></i></a><h3>At Post Pimpri Khurd, Akot, Akola </h3>
+        <a href="https://maps.app.goo.gl/8nPCYPjFn3rctEPE6?g_st=aw" target="_blank"><i class="fa-solid fa-location-dot"></i><h3>At Post Pimpri Khurd, Akot, Akola </h3></a>
       </div>
       <div class="insta">
-        <a href="https://www.instagram.com/invites/contact/?i=1whzilq6ojv8t&utm_content=inaenne" target="_blank"><i class="fa-brands fa-instagram"></i></a><h3>prathamesh_magar_07</h3>
+        <a href="https://www.instagram.com/invites/contact/?i=1whzilq6ojv8t&utm_content=inaenne" target="_blank"><i class="fa-brands fa-instagram"></i><h3>prathamesh_magar_07</h3></a>
       </div>
       <div class="facebook">
-        <a href="https://www.facebook.com/prathamesh.magar.94?mibextid=ZbWKwL" target="_blank"><i class="fa-brands fa-facebook"></i></a><h3>Prathamesh Magar</h3>
+        <a href="https://www.facebook.com/prathamesh.magar.94?mibextid=ZbWKwL" target="_blank"><i class="fa-brands fa-facebook"></i><h3>Prathamesh Magar</h3></a>
       </div>
       <div class="linkedin">
-        <a href="https://www.linkedin.com/in/prathamesh-magar-9b4229289" target="_blank"><i class="fa-brands fa-linkedin"></i></a><h3>Prathamesh Magar</h3>
+        <a href="https://www.linkedin.com/in/prathamesh-magar-9b4229289" target="_blank"><i class="fa-brands fa-linkedin"></i><h3>Prathamesh Magar</h3></a>
       </div>
       <div class="gmail">
-        <a href="prathameshmagar10@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a><h3>prathameshmagar10@gmail.com</h3>
+        <a href="prathameshmagar10@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i><h3>prathameshmagar10@gmail.com</h3></a>
       </div>
 
      </div>
@@ -468,9 +428,43 @@ margin-left:0;
     var targetSection = document.querySelector('#psm');
     if (targetSection) {
       var targetY = targetSection.getBoundingClientRect().top + window.pageYOffset;
-      mediumScrollTo(document.documentElement, targetY, 1000); // Call mediumScrollTo function with desired duration (in milliseconds)
+      mediumScrollTo(document.documentElement, targetY, 1500); // Call mediumScrollTo function with desired duration (in milliseconds)
     }
   });
+
+  // Function to handle smooth scrolling
+function scrollToElement(targetElement, duration) {
+  var targetPosition = targetElement.offsetTop;
+  var startPosition = window.pageYOffset;
+  var distance = targetPosition - startPosition;
+  var startTime = null;
+
+  function animation(currentTime) {
+    if (startTime === null) startTime = currentTime;
+    var timeElapsed = currentTime - startTime;
+    var scrollProgress = Math.min(timeElapsed / duration, 1);
+    window.scrollTo(0, startPosition + distance * scrollProgress);
+
+    if (timeElapsed < duration) {
+      requestAnimationFrame(animation);
+    }
+  }
+
+  requestAnimationFrame(animation);
+}
+
+// Event listeners for navbar links
+document.querySelectorAll('nav ul li a').forEach(link => {
+  link.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    var targetId = this.getAttribute('href').substring(1); // Extract target section id
+    var targetElement = document.getElementById(targetId); // Get target section element
+    if (targetElement) {
+      scrollToElement(targetElement, 1000); // Adjust the duration as needed (in milliseconds)
+    }
+  });
+});
+
 </script>
 
 </body>

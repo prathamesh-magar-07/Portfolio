@@ -128,7 +128,7 @@ section {
     border-radius: 20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 700px;
+    width: 950px;
     transition: transform 0.3s, box-shadow 0.3s;
     position: relative;
     overflow: hidden;
